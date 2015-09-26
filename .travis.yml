@@ -1,6 +1,10 @@
 language: ruby
 rvm:
 - 2.0.0
-- 1.9.3
-- jruby-19mode
-- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: 4HFZS/SP04yvr4HjsciNMUGSfD23UPlwfpC6p8wxjEXnH+MBb8dugMVBQJacp4FUITEea2lOsM/2dVvjUtMOTztS7b7vjT4FAk4FfvzJJtnDmq0UkAMoD61P6YZgc4bQw2ssDNWMLH4k5SqGYjlSrlunELoOJPzDdX/M8hXhyoXUlVwgrpDm0uONu0MBpJzTnAR5gXqmAdW8CetJiPAOJax8ptMYuk8V3GBYisWIO1/lf23UrEbb9PfqP+D5+W2EwwODfn2HqOvVRj48mEJaQotYE6ofkTkKvFMbKsP2P9h+ACeE0xfsGMjkEhPODF11jiIDRectwn8Y3dMN+u/6qjj6MIcJQ5mxi/etcXy5j21k40eZeAz7PyRUGPw+dC8p6O2aJyEhiIecZoxsB4OFCnpWYNSrcEqsTqBNKN1I2EVVL2l90cDPZm6Qow+zpfZdnshMYYl3N5kOPeIZ6erKMUKMGIzER+d6eZvtsFK2Wzi03aFCgjQ3JbrUMgv/QuMFERGk+91AlBuKY1usLsn+pdZPnR1mqYDDyao4cJK7/IIdDmxDQtnVgBe+VSDTb0Pr5ObCkBs9h+APC1vzlwhzIahA/pZjV91EA3WRnzT7sf/1y8HFyakOTnfTV3h7+DIQihkjq2lNWTsmNhKdkVqEP7mhK2k5CINLu9S51tvY27M=
+  app: fierce-thicket-4802
+  on:
+    repo: sazanaminoya/iot_enpit
