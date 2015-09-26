@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>緊急速報画面</title>
+<title>Emergency</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 img.ex1 {
@@ -14,21 +14,46 @@ width: 70%;
 height: 70%;
 }
 </style>
+<script type="text/javascript">
+<!--
+var listURL = {
+BandarSeriBegawan: "/alert",
+Bangar: "/alert2",
+Jerudong: "/alert3",
+Muara: "/alert",
+Seria: "/alert2",
+Sukang: "/alert3",
+PekanTutong: "/alert"
+}
+
+function checkSelect(){
+var mySelect = "";
+var f_select = document.form1.select;
+var f_option = f_select.getElementsByTagName("option");
+for(var i=0;i<f_option.length;i++){
+if( f_option[ i ].selected ){ mySelect = f_option[ i ].value; }
+}
+window.location.href = listURL[mySelect];
+}
+
+// -->
+</script>
+
 </head>
 
 <body>
 <form name="form1">
 <div id="out"><!-- 外周 -->
 <div id="head">
-<h1>緊急速報画面-呼び出し</h1>
+<h1>Call emergency page</h1>
 </div><!-- head -->
 
 <div id="main">
 
 	<div id="right"><!-- 本文 -->
-	<h2>緊急速報-呼び出し</h2>
+	<h2>Call emergency page</h2>
         <!--<iframe  scrolling="no" frameborder="no" src="./aaa.html" width="400px" height="350px"></iframe>-->
-        <select name="select" class="bsize" id="selBox0" onChange="getSelect(0,this.value)">
+        <select name="select">
         <option value="BandarSeriBegawan">Bandar Seri Begawan</option>
         <option value="Bangar">Bangar, Brunei</option>
         <option value="Jerudong">Jerudong</option>
@@ -37,8 +62,7 @@ height: 70%;
         <option value="Sukang">Sukang</option>
         <option value="PekanTutong">Pekan Tutong</option>
         </select>
-        <button type="button" name="jump" value="jump" onclick="location.href='/alert'">緊急速報</button>
-       
+        <button type="button" name="jump" value="jump" onclick="checkSelect();">Early Warning</button>
 
 	</div><!-- right -->
 
